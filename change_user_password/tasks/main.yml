@@ -1,0 +1,9 @@
+---
+# tasks file for change_user_password
+- name: Change password for user 'test'
+  user:
+    name: test
+    password: "{{ user_password | password_hash('sha512') }}"
+
+- name: Expire password for user 'test'
+  command: passwd -e test

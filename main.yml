@@ -1,0 +1,8 @@
+---
+  name: Change password and expired it on first login
+  hosts: all
+  become: true
+  roles:
+    - role: change_user_password
+      vars:
+        user_password: 39ir-j90u
